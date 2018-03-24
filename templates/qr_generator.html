@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<style>
+	body{margin: 0 200px 0 200px;}
+	div{
+	    width:100%;
+	    height:auto;
+		}
+	td{
+		border:1px solid black;
+		margin-bottom: 20px;
+	}
+
+	th{
+		padding-right: 20px;
+	}
+
+	.logo img{ height:300; 
+			width:500; }
+
+	tr th{padding-top:15px;}
+
+	.body{padding: 10px 0 10px;
+		background-color: #eaeaea;}
+
+</style>
+
+
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<title>QR Code Generator</title>
+	</head>
+	<body>
+		
+		<div>
+			<table align="center">
+				<div>
+					<th><img class="logo" src="https://lh3.ggpht.com/iMW3Ij8eGTM9IuFp0pAfFYLSmizPV0J21quzSfFzRpR2oEVtmSQdTWH6DjW4Stia6gs=w170" alt="QR Generator" height="80" width="100"></th>
+				</div>	
+			</table>
+		</div>
+
+		<div>
+			<div class="body">
+				<table align="center">
+					<form action="/generate" method="POST">
+						<tr>
+							<td colspan="6"><img src="{{html_img}}" alt="QR" height=280 width=280></td>
+						</tr>
+						<tr>
+							<th>SSID: </th>
+							<th><input type="text" name="SSID"></th>
+						</tr>
+						<tr>
+							<th>Password: </th>
+							<th><input type="text" name="Password"></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th colspan="3"><input type="submit" value="Generate"></th>
+						</tr>
+					</form>
+
+				</table>
+			</div>
+		</div>	
+	</body>
+</html>
